@@ -179,15 +179,15 @@ const header = $("#header");
 addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 30), { passive: true });
 
 const menuToggle = $("#menuToggle"), mobileNav = $("#mobileNav");
-menuToggle.addEventListener("click", () => {
-  const open = !mobileNav.classList.contains("open");
+function setMenu(open) {
   mobileNav.classList.toggle("open", open);
   menuToggle.classList.toggle("open", open);
+  menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   document.body.classList.toggle("locked", open);
-});
-$$("#mobileNav a").forEach(a => a.addEventListener("click", () => {
-  mobileNav.classList.remove("open"); menuToggle.classList.remove("open"); document.body.classList.remove("locked");
-}));
+}
+menuToggle.addEventListener("click", () => setMenu(!mobileNav.classList.contains("open")));
+$$("#mobileNav a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+addEventListener("resize", () => { if (innerWidth > 860 && mobileNav.classList.contains("open")) setMenu(false); });
 
 // Active nav link
 const navLinks = $$(".nav a");
@@ -469,6 +469,7 @@ $("#cartItems").addEventListener("click", e => {
 /* ---------- Panels (drawers / modals / search) ---------- */
 const overlay = $("#overlay");
 function openPanel(el) {
+  if (mobileNav.classList.contains("open")) setMenu(false);
   closeAll(true);
   el.classList.add("open");
   if (!el.classList.contains("search-overlay")) overlay.classList.add("show");
@@ -483,8 +484,25 @@ function closeAll(silent) {
 overlay.addEventListener("click", () => closeAll());
 $$(".modal").forEach(m => m.addEventListener("click", e => { if (e.target === m) closeAll(); }));
 document.addEventListener("click", e => { if (e.target.closest("[data-close]")) closeAll(); });
+// Swipe to dismiss: drawers slide right, bottom sheets slide down
+function swipeToClose(el, axis, getScroller) {
+  let start = null;
+  el.addEventListener("touchstart", e => {
+    const sc = getScroller ? getScroller() : null;
+    start = sc && sc.scrollTop > 0 ? null : { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  }, { passive: true });
+  el.addEventListener("touchend", e => {
+    if (!start) return;
+    const dx = e.changedTouches[0].clientX - start.x, dy = e.changedTouches[0].clientY - start.y;
+    if (axis === "x" ? dx > 90 && Math.abs(dy) < 60 : dy > 110 && Math.abs(dx) < 60) closeAll();
+    start = null;
+  });
+}
+$$(".drawer").forEach(d => swipeToClose(d, "x"));
+$$(".modal-card").forEach(c => swipeToClose(c, "y", () => c));
+
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeAll();
+  if (e.key === "Escape") { closeAll(); setMenu(false); }
   if ((e.metaKey || e.ctrlKey) && e.key === "k") { e.preventDefault(); openSearch(); }
 });
 $("#cartBtn").addEventListener("click", () => { renderCart(); openPanel($("#cartDrawer")); });
@@ -669,6 +687,7 @@ function renderSummary() {
   $("#sumDisc").textContent = "−" + fmt(t.disc);
   $("#sumShip").textContent = t.ship ? fmt(t.ship) : "Free";
   $("#sumTotal").textContent = fmt(t.total);
+  $("#sumToggleTotal").textContent = fmt(t.total);
   $("#payAmount").textContent = fmt(t.total);
 }
 function resetCheckout() {
@@ -683,6 +702,12 @@ $("#checkoutBtn").addEventListener("click", () => {
   setStep(0); renderSummary(); openPanel(co);
 });
 $$("input[name=ship]").forEach(r => r.addEventListener("change", renderSummary));
+$("#sumToggle").addEventListener("click", () => {
+  const box = $("#checkoutSummary"), open = !box.classList.contains("expanded");
+  box.classList.toggle("expanded", open);
+  $("#sumToggle").setAttribute("aria-expanded", open);
+  $("#sumToggle u").textContent = open ? "Hide order summary" : "Show order summary";
+});
 $("#applyPromo").addEventListener("click", () => {
   const code = $("#promoInput").value.trim().toUpperCase();
   if (code === "DREAM15") { discount = 0.15; toast("Promo applied — 15% off!", "🎉"); }

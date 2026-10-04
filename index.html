@@ -63,6 +63,11 @@
     <a href="#fabrics">Fabric Guide</a>
     <a href="#quiz">Sleep Quiz</a>
     <a href="#reviews">Reviews</a>
+    <div class="mobile-nav-foot">
+      <p>🚚 Free shipping over ₹4,999</p>
+      <p>🌙 100-night sleep trial</p>
+      <a href="#shop" class="btn btn-primary block">Shop Bedsheets <span class="arrow">→</span></a>
+    </div>
   </div>
 
   <main>
@@ -478,6 +483,10 @@
         </div>
 
         <aside class="checkout-summary" id="checkoutSummary">
+          <button class="sum-toggle" id="sumToggle" type="button" aria-expanded="false">
+            <span>🛍️ <u>Show order summary</u></span><b id="sumToggleTotal"></b>
+          </button>
+          <div class="sum-body">
           <h4>Order summary</h4>
           <div class="sum-items" id="sumItems"></div>
           <div class="promo-code">
@@ -489,6 +498,7 @@
             <div class="row discount" id="sumDiscRow" hidden><span>Discount (DREAM15)</span><span id="sumDisc"></span></div>
             <div class="row"><span>Shipping</span><span id="sumShip"></span></div>
             <div class="row total"><span>Total</span><span id="sumTotal"></span></div>
+          </div>
           </div>
         </aside>
       </div>
