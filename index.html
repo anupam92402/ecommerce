@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunelle — Luxury Bedsheets & Bedding</title>
+  <meta name="description" content="Lunelle crafts breathable, beautifully soft bedsheets in cotton, linen, silk and bamboo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Announcement bar -->
+  <div class="announce">
+    <div class="announce-track">
+      <span>Free shipping on orders over ₹4,999</span><span>•</span>
+      <span>100-night sleep trial</span><span>•</span>
+      <span>Use code <b>DREAM15</b> for 15% off your first order</span><span>•</span>
+      <span>OEKO-TEX® certified fabrics</span><span>•</span>
+      <span>Free shipping on orders over ₹4,999</span><span>•</span>
+      <span>100-night sleep trial</span><span>•</span>
+      <span>Use code <b>DREAM15</b> for 15% off your first order</span><span>•</span>
+      <span>OEKO-TEX® certified fabrics</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#" class="logo">Lunelle<span>.</span></a>
+      <nav class="nav" id="nav">
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#fabrics">Fabric Guide</a>
+        <a href="#quiz">Sleep Quiz</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn" id="wishBtn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+          <span class="badge" id="wishCount">0</span>
+        </button>
+        <button class="icon-btn" id="cartBtn" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#shop">Shop</a>
+    <a href="#collections">Collections</a>
+    <a href="#fabrics">Fabric Guide</a>
+    <a href="#quiz">Sleep Quiz</a>
+    <a href="#reviews">Reviews</a>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">New · Autumn Collection 2026</p>
+          <h1 class="hero-title">
+            <span class="line"><span>Sleep wrapped</span></span>
+            <span class="line"><span>in <em>pure softness</em></span></span>
+          </h1>
+          <p class="hero-sub reveal">Breathable, buttery-soft bedsheets woven from long-staple cotton, French linen, mulberry silk and bamboo. Made to feel better with every wash.</p>
+          <div class="hero-ctas reveal">
+            <a href="#shop" class="btn btn-primary">Shop Bedsheets <span class="arrow">→</span></a>
+            <a href="#quiz" class="btn btn-ghost">Find your fit</a>
+          </div>
+          <div class="hero-stats reveal">
+            <div><strong data-count="120000">0</strong><span>Happy sleepers</span></div>
+            <div><strong data-count="4.9" data-decimals="1">0</strong><span>Average rating</span></div>
+            <div><strong data-count="100">0</strong><span>Night trial</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="bed-card">
+            <svg class="bed" viewBox="0 0 480 360" aria-label="Bed preview">
+              <defs>
+                <linearGradient id="duvetShade" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#fff" stop-opacity=".25"/>
+                  <stop offset="1" stop-color="#000" stop-opacity=".12"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="240" cy="330" rx="210" ry="16" fill="#000" opacity=".08"/>
+              <!-- headboard -->
+              <rect x="50" y="40" width="380" height="150" rx="26" fill="#d8c8b4"/>
+              <rect x="66" y="56" width="348" height="120" rx="18" fill="#e6d9c8"/>
+              <!-- mattress -->
+              <rect x="40" y="170" width="400" height="130" rx="16" fill="#f8f5f0"/>
+              <!-- pillows -->
+              <g class="pillow">
+                <rect x="78" y="128" width="150" height="62" rx="26" class="bed-pillow"/>
+                <rect x="252" y="128" width="150" height="62" rx="26" class="bed-pillow"/>
+              </g>
+              <!-- duvet -->
+              <path class="bed-duvet" d="M36 210 Q240 196 444 210 L450 300 Q240 316 30 300 Z"/>
+              <path d="M36 210 Q240 196 444 210 L450 300 Q240 316 30 300 Z" fill="url(#duvetShade)"/>
+              <!-- fold -->
+              <path class="bed-fold" d="M38 206 Q240 190 442 206 L444 232 Q240 220 36 232 Z"/>
+              <path d="M38 232 Q240 220 444 232" stroke="#000" stroke-opacity=".08" stroke-width="2" fill="none"/>
+              <!-- legs -->
+              <rect x="56" y="300" width="14" height="26" rx="4" fill="#b59e85"/>
+              <rect x="410" y="300" width="14" height="26" rx="4" fill="#b59e85"/>
+            </svg>
+            <div class="bed-controls">
+              <span class="bed-label">Try a colour: <b id="bedColorName">Oat</b></span>
+              <div class="swatches" id="heroSwatches"></div>
+            </div>
+          </div>
+          <div class="float-chip chip-1">🌿 Organic cotton</div>
+          <div class="float-chip chip-2">❄️ Cool to the touch</div>
+        </div>
+      </div>
+      <a href="#perks" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- Perks -->
+    <section class="perks" id="perks">
+      <div class="container perks-grid">
+        <div class="perk reveal"><div class="perk-ico">🚚</div><div><h4>Free Shipping</h4><p>On orders over ₹4,999</p></div></div>
+        <div class="perk reveal"><div class="perk-ico">🌙</div><div><h4>100-Night Trial</h4><p>Sleep on it, risk-free</p></div></div>
+        <div class="perk reveal"><div class="perk-ico">🧵</div><div><h4>Premium Weaves</h4><p>300–1000 thread count</p></div></div>
+        <div class="perk reveal"><div class="perk-ico">♻️</div><div><h4>Sustainably Made</h4><p>OEKO-TEX® certified</p></div></div>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="section" id="collections">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Collections</p>
+          <h2>Shop by fabric</h2>
+        </div>
+        <div class="collections">
+          <a class="collection reveal" data-filter="cotton" href="#shop" style="--c1:#efe6da;--c2:#d9c8b2">
+            <div class="collection-art" data-pattern="stripe" data-color="#e9dfd0"></div>
+            <div class="collection-info"><h3>Egyptian Cotton</h3><span>Crisp & breathable</span></div>
+          </a>
+          <a class="collection reveal" data-filter="linen" href="#shop" style="--c1:#e5e9df;--c2:#bcc7ae">
+            <div class="collection-art" data-pattern="waffle" data-color="#a9b79a"></div>
+            <div class="collection-info"><h3>French Linen</h3><span>Relaxed & airy</span></div>
+          </a>
+          <a class="collection reveal" data-filter="silk" href="#shop" style="--c1:#f0e2e0;--c2:#d9b3ad">
+            <div class="collection-art" data-pattern="solid" data-color="#d7a9a1"></div>
+            <div class="collection-info"><h3>Mulberry Silk</h3><span>Smooth & luxurious</span></div>
+          </a>
+          <a class="collection reveal" data-filter="bamboo" href="#shop" style="--c1:#e2e7ec;--c2:#a9b8c6">
+            <div class="collection-art" data-pattern="dots" data-color="#9fb2c4"></div>
+            <div class="collection-info"><h3>Bamboo Lyocell</h3><span>Cool & silky</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="section shop" id="shop">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Bestsellers</p>
+          <h2>Bedsheets you'll never want to leave</h2>
+        </div>
+
+        <div class="toolbar reveal">
+          <div class="chips" id="filterChips">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="cotton">Cotton</button>
+            <button class="chip" data-filter="linen">Linen</button>
+            <button class="chip" data-filter="silk">Silk</button>
+            <button class="chip" data-filter="bamboo">Bamboo</button>
+          </div>
+          <div class="toolbar-right">
+            <label class="select">
+              <span>Sort</span>
+              <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <p class="empty-state" id="emptyState" hidden>No bedsheets match this filter.</p>
+      </div>
+    </section>
+
+    <!-- Promo banner -->
+    <section class="promo">
+      <div class="container promo-inner reveal">
+        <div class="promo-copy">
+          <p class="eyebrow light">Limited time</p>
+          <h2>The Complete Bed Bundle</h2>
+          <p>Fitted sheet, flat sheet, duvet cover and 4 pillowcases. Everything your bed needs — save up to 30%.</p>
+          <div class="countdown" id="countdown">
+            <div><b data-unit="d">00</b><span>Days</span></div>
+            <div><b data-unit="h">00</b><span>Hrs</span></div>
+            <div><b data-unit="m">00</b><span>Min</span></div>
+            <div><b data-unit="s">00</b><span>Sec</span></div>
+          </div>
+          <button class="btn btn-light" id="bundleBtn">Shop the Bundle <span class="arrow">→</span></button>
+        </div>
+        <div class="promo-art" id="promoArt"></div>
+      </div>
+    </section>
+
+    <!-- Fabric guide -->
+    <section class="section" id="fabrics">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Fabric Guide</p>
+          <h2>Find the fabric that feels like you</h2>
+        </div>
+        <div class="fabric-wrap reveal">
+          <div class="fabric-tabs" id="fabricTabs" role="tablist">
+            <button class="active" data-fabric="cotton">Cotton</button>
+            <button data-fabric="linen">Linen</button>
+            <button data-fabric="silk">Silk</button>
+            <button data-fabric="bamboo">Bamboo</button>
+            <span class="tab-indicator" id="tabIndicator"></span>
+          </div>
+          <div class="fabric-panel" id="fabricPanel">
+            <div class="fabric-swatch" id="fabricSwatch"></div>
+            <div class="fabric-info">
+              <h3 id="fabricTitle"></h3>
+              <p id="fabricDesc"></p>
+              <div class="meters" id="fabricMeters"></div>
+              <a href="#shop" class="btn btn-primary" id="fabricShop">Shop <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section class="section quiz-section" id="quiz">
+      <div class="container">
+        <div class="quiz-card reveal">
+          <div class="quiz-head">
+            <p class="eyebrow">Sleep Quiz · 30 seconds</p>
+            <h2>Not sure where to start?</h2>
+            <div class="quiz-progress"><span id="quizBar"></span></div>
+          </div>
+          <div class="quiz-body" id="quizBody"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Reviews</p>
+          <h2>Loved by 120,000+ sleepers</h2>
+        </div>
+        <div class="carousel reveal" id="carousel">
+          <div class="carousel-track" id="carouselTrack"></div>
+          <div class="carousel-nav">
+            <button class="icon-btn round" id="prevReview" aria-label="Previous">←</button>
+            <div class="dots" id="carouselDots"></div>
+            <button class="icon-btn round" id="nextReview" aria-label="Next">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container newsletter-inner reveal">
+        <h2>Get 15% off your first order</h2>
+        <p>Join the Lunelle list for early access to new colours, restocks and sleep tips.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" placeholder="Your email address" required />
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="logo">Lunelle<span>.</span></a>
+        <p class="muted">Thoughtfully made bedding for deeper, dreamier sleep.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Pinterest">PI</a><a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h5>Shop</h5>
+        <a href="#shop">Bedsheets</a><a href="#shop">Duvet Covers</a><a href="#shop">Pillowcases</a><a href="#shop">Bundles</a>
+      </div>
+      <div>
+        <h5>Help</h5>
+        <a href="#">Shipping</a><a href="#">Returns</a><a href="#">Size Guide</a><a href="#">Care Instructions</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="#">Our Story</a><a href="#">Sustainability</a><a href="#">Careers</a><a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Lunelle Home. Demo storefront — no real orders are placed.</span>
+      <span>Visa · Mastercard · UPI · RuPay</span>
+    </div>
+  </footer>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Cart drawer -->
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <h3>Your Cart <span id="cartHeadCount"></span></h3>
+      <button class="icon-btn close" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="ship-progress">
+      <p id="shipMsg"></p>
+      <div class="bar"><span id="shipBar"></span></div>
+    </div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="row"><span>Subtotal</span><b id="cartSubtotal">₹0</b></div>
+      <p class="muted small">Taxes and shipping calculated at checkout.</p>
+      <button class="btn btn-primary block" id="checkoutBtn">Checkout <span class="arrow">→</span></button>
+    </div>
+  </aside>
+
+  <!-- Wishlist drawer -->
+  <aside class="drawer" id="wishDrawer" aria-label="Wishlist">
+    <div class="drawer-head">
+      <h3>Wishlist</h3>
+      <button class="icon-btn close" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="drawer-body" id="wishItems"></div>
+  </aside>
+
+  <!-- Quick view modal -->
+  <div class="modal" id="quickView" role="dialog" aria-modal="true">
+    <div class="modal-card qv">
+      <button class="icon-btn close modal-close" data-close aria-label="Close">✕</button>
+      <div class="qv-media" id="qvMedia"></div>
+      <div class="qv-info">
+        <span class="qv-cat" id="qvCat"></span>
+        <h3 id="qvName"></h3>
+        <div class="rating" id="qvRating"></div>
+        <div class="price-row"><span class="price" id="qvPrice"></span><span class="old" id="qvOld"></span></div>
+        <p class="muted" id="qvDesc"></p>
+        <div class="opt">
+          <span class="opt-label">Colour: <b id="qvColorName"></b></span>
+          <div class="swatches" id="qvSwatches"></div>
+        </div>
+        <div class="opt">
+          <span class="opt-label">Size</span>
+          <div class="sizes" id="qvSizes"></div>
+        </div>
+        <div class="qv-actions">
+          <div class="qty" id="qvQty">
+            <button data-step="-1" aria-label="Decrease">−</button><span>1</span><button data-step="1" aria-label="Increase">+</button>
+          </div>
+          <button class="btn btn-primary grow" id="qvAdd">Add to Cart</button>
+        </div>
+        <ul class="qv-points">
+          <li>✓ <span id="qvThread"></span></li>
+          <li>✓ Free returns within 100 nights</li>
+          <li>✓ Ships in 1–2 business days</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout modal -->
+  <div class="modal" id="checkout" role="dialog" aria-modal="true">
+    <div class="modal-card checkout-card">
+      <button class="icon-btn close modal-close" data-close aria-label="Close">✕</button>
+      <div class="steps" id="steps">
+        <div class="step active"><span>1</span>Shipping</div>
+        <div class="step"><span>2</span>Payment</div>
+        <div class="step"><span>3</span>Done</div>
+      </div>
+      <div class="checkout-grid">
+        <div class="checkout-main">
+          <!-- Step 1 -->
+          <form class="co-step active" id="shipForm" novalidate>
+            <h3>Shipping details</h3>
+            <div class="field-grid">
+              <label class="field"><input required name="first" placeholder=" " /><span>First name</span></label>
+              <label class="field"><input required name="last" placeholder=" " /><span>Last name</span></label>
+              <label class="field full"><input required type="email" name="email" placeholder=" " /><span>Email</span></label>
+              <label class="field full"><input required name="address" placeholder=" " /><span>Address</span></label>
+              <label class="field"><input required name="city" placeholder=" " /><span>City</span></label>
+              <label class="field"><input required name="pin" pattern="\d{6}" maxlength="6" placeholder=" " /><span>PIN code</span></label>
+              <label class="field full"><input required name="phone" pattern="\d{10}" maxlength="10" placeholder=" " /><span>Phone (10 digits)</span></label>
+            </div>
+            <div class="ship-options">
+              <label class="radio-card"><input type="radio" name="ship" value="0" checked /><div><b>Standard</b><span>3–5 days</span></div><em>Free</em></label>
+              <label class="radio-card"><input type="radio" name="ship" value="199" /><div><b>Express</b><span>1–2 days</span></div><em>₹199</em></label>
+            </div>
+            <button class="btn btn-primary block" type="submit">Continue to Payment <span class="arrow">→</span></button>
+          </form>
+
+          <!-- Step 2 -->
+          <form class="co-step" id="payForm" novalidate>
+            <h3>Payment</h3>
+            <div class="pay-tabs" id="payTabs">
+              <button type="button" class="active" data-pay="card">💳 Card</button>
+              <button type="button" data-pay="upi">📱 UPI</button>
+              <button type="button" data-pay="cod">💵 Cash on Delivery</button>
+            </div>
+
+            <div class="pay-panel active" data-panel="card">
+              <div class="card-preview" id="cardPreview">
+                <div class="card-face front">
+                  <div class="chip-gold"></div>
+                  <div class="card-num" id="cpNum">•••• •••• •••• ••••</div>
+                  <div class="card-row"><div><small>Card holder</small><span id="cpName">YOUR NAME</span></div><div><small>Expires</small><span id="cpExp">MM/YY</span></div></div>
+                </div>
+                <div class="card-face back">
+                  <div class="strip"></div>
+                  <div class="cvv-box"><span id="cpCvv">•••</span></div>
+                </div>
+              </div>
+              <div class="field-grid">
+                <label class="field full"><input name="cnum" id="cnum" inputmode="numeric" maxlength="19" placeholder=" " /><span>Card number</span></label>
+                <label class="field full"><input name="cname" id="cname" placeholder=" " /><span>Name on card</span></label>
+                <label class="field"><input name="cexp" id="cexp" maxlength="5" placeholder=" " /><span>MM/YY</span></label>
+                <label class="field"><input name="ccvv" id="ccvv" maxlength="3" inputmode="numeric" placeholder=" " /><span>CVV</span></label>
+              </div>
+            </div>
+            <div class="pay-panel" data-panel="upi">
+              <div class="upi-box">
+                <div class="qr" aria-hidden="true"></div>
+                <div>
+                  <p>Scan with any UPI app or enter your UPI ID.</p>
+                  <label class="field full"><input name="upi" placeholder=" " /><span>yourname@upi</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="pay-panel" data-panel="cod">
+              <p class="cod-note">Pay in cash or UPI when your order arrives. A ₹49 handling fee applies.</p>
+            </div>
+
+            <p class="demo-note">🔒 Demo checkout — no payment is processed and no data leaves your browser.</p>
+            <div class="row-btns">
+              <button type="button" class="btn btn-ghost" id="backToShip">← Back</button>
+              <button class="btn btn-primary grow" type="submit" id="payBtn">Pay <span id="payAmount"></span></button>
+            </div>
+          </form>
+
+          <!-- Step 3 -->
+          <div class="co-step success" id="successStep">
+            <div class="check-anim">
+              <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M14 27l8 8 16-17"/></svg>
+            </div>
+            <h3>Order confirmed!</h3>
+            <p class="muted">Thank you, <b id="successName"></b>. Your order <b id="orderId"></b> is on its way to dreamland.</p>
+            <p class="muted small">A confirmation has been "sent" to <span id="successEmail"></span> (demo).</p>
+            <button class="btn btn-primary" data-close>Continue Shopping</button>
+          </div>
+        </div>
+
+        <aside class="checkout-summary" id="checkoutSummary">
+          <h4>Order summary</h4>
+          <div class="sum-items" id="sumItems"></div>
+          <div class="promo-code">
+            <input id="promoInput" placeholder="Promo code" />
+            <button class="btn btn-ghost small" id="applyPromo" type="button">Apply</button>
+          </div>
+          <div class="sum-rows">
+            <div class="row"><span>Subtotal</span><span id="sumSub"></span></div>
+            <div class="row discount" id="sumDiscRow" hidden><span>Discount (DREAM15)</span><span id="sumDisc"></span></div>
+            <div class="row"><span>Shipping</span><span id="sumShip"></span></div>
+            <div class="row total"><span>Total</span><span id="sumTotal"></span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="container">
+      <div class="search-bar">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="searchInput" placeholder="Search bedsheets, fabrics, colours…" autocomplete="off" />
+        <button class="icon-btn" data-close aria-label="Close search">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <div class="toast-wrap" id="toastWrap"></div>
+  <canvas id="confetti"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
